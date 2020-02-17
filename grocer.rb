@@ -1,19 +1,5 @@
 require 'pry'
 def find_item_by_name_in_collection(name, collection)
- 
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
-  ### Write the `find_item_by_name_in_collection` Method
-
-# * Arguments:
-#   * `String`: name of the item to find
-#   * `Array`: a collection of items to search through
-# * Returns:
-#   * `nil` if no match is found
-#   * the matching `Hash` if a match is found between the desired name and a given
-#     `Hash`'s :item key
-  
   i = 0 
   while i < collection.count do 
     if collection[i][:item] === name 
@@ -25,10 +11,6 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   new_cart = []
   i = 0 
   while i < cart.length do
@@ -50,9 +32,6 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
   i = 0 
   while i < coupons.length do 
     cart_item = find_item_by_name_in_collection(coupons[i][:item], cart)
@@ -82,6 +61,12 @@ def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  i = 0 
+  while i < cart.length do 
+    if cart[i][:clearance]
+      cart[i][]
+    i += 1 
+  end 
 end
 
 def checkout(cart, coupons)
