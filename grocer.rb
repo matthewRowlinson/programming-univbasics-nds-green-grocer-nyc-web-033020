@@ -85,5 +85,8 @@ def checkout(cart, coupons)
     total += final_cart[i][:price] * final_cart[i][:num]
     i += 1 
   end
-  if total >
+  if total > 100 
+    total *= 0.90
+  end
+  total 
 end
