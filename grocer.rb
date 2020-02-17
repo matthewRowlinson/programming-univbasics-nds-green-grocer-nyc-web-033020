@@ -78,7 +78,8 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-  final_cart = apply_clearance(apply_coupons(consolidate_cart(cart), coupons))
+  consolidated_cart = consolidate_cart(cart)
+  
   total = 0 
   i = 0 
   while i < final_cart.length do 
